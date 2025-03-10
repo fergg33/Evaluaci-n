@@ -29,7 +29,7 @@ def sustituye_valores_nulos(df):
 def cuenta_valores_nulos(df):
     #Valores nulos por columna 
     valores_nulos_cols = df.isnull().sum()
-    #Valores nuelos por dataframe
+    #Valores nulos por dataframe
     valores_nulos_df = df.isnull().sum().sum()
     
     return ("Valores nulos por columna", valores_nulos_cols,
@@ -51,4 +51,4 @@ def sustituye_valores_atipicos(df):
             df.loc[df[col] > limite_superior_iqr, col] = limite_superior_iqr
             df.loc[df[col] < limite_inferior_iqr, col] = limite_inferior_iqr
 
-    return df  # Indentación corregida aquí
+    return df 
